@@ -1,0 +1,1055 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#f6f6f4" />
+    <title>About — Ethan Antoine Li</title>
+    <meta
+      name="description"
+      content="Ethan Antoine Li — A-level student at The British School of Guangzhou, applying to read engineering in 2027. A five-axis robotic arm, an FPV drone, and Nora."
+    />
+    <meta name="author" content="Ethan Antoine Li" />
+    <link rel="canonical" href="https://ethanantoineli.github.io/" />
+
+    <meta property="og:type" content="profile" />
+    <meta property="og:site_name" content="Ethan Antoine Li" />
+    <meta property="og:title" content="About — Ethan Antoine Li" />
+    <meta
+      property="og:description"
+      content="A-level student in Guangzhou, applying to read engineering in 2027. I design, print and program the pieces of a mountain-rescue robot."
+    />
+    <meta property="og:url" content="https://ethanantoineli.github.io/" />
+    <meta property="og:image" content="https://ethanantoineli.github.io/img/og-about.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Ethan Antoine Li — about page of the drawing set." />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="preload" href="/fonts/inter-tight-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/inter-tight-400.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/fonts/instrument-serif-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Ethan Antoine Li",
+        "url": "https://ethanantoineli.github.io/",
+        "image": "https://ethanantoineli.github.io/img/portrait.jpg",
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "The British School of Guangzhou"
+        },
+        "knowsAbout": ["Engineering", "Robotics", "Computer-aided design", "Python"],
+        "knowsLanguage": ["French", "Chinese", "English"]
+      }
+    </script>
+
+    <style>
+      @font-face {
+        font-family: "Inter Tight";
+        src: url("/fonts/inter-tight-300.woff2") format("woff2");
+        font-weight: 300;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Inter Tight";
+        src: url("/fonts/inter-tight-400.woff2") format("woff2");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+      @font-face {
+        font-family: "Instrument Serif";
+        src: url("/fonts/instrument-serif-italic-latin.woff2") format("woff2");
+        font-weight: 400;
+        font-style: italic;
+        font-display: swap;
+      }
+
+      :root {
+        --paper: #f6f6f4;
+        --ink: #101214;
+        --ink-soft: #2c2f33;
+        --body: #3c4045;
+        --muted: #5f6469;
+        --accent: #b23e22;
+        --accent-on-ink: #d9633f;
+
+        --line: rgba(16, 18, 20, 0.14);
+        --line-soft: rgba(16, 18, 20, 0.07);
+
+        --sans: "Inter Tight", -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+        --serif: "Instrument Serif", "Iowan Old Style", Palatino, Georgia, serif;
+        --mono: ui-monospace, "SF Mono", SFMono-Regular, Menlo, "IBM Plex Mono", monospace;
+
+        --gutter: clamp(22px, 3.6vw, 56px);
+        --chrome-h: 54px;
+        --ease: cubic-bezier(0.22, 1, 0.36, 1);
+        --width: 1280px;
+      }
+
+      *,
+      *::before,
+      *::after {
+        box-sizing: border-box;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        margin: 0;
+        background: var(--paper);
+        color: var(--ink);
+        font-family: var(--sans);
+        font-weight: 300;
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+      }
+
+      ::selection {
+        background: rgba(178, 62, 34, 0.16);
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 3px;
+      }
+
+      .mono {
+        font-family: var(--mono);
+        font-size: 11px;
+        font-weight: 400;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .skip {
+        position: absolute;
+        left: -9999px;
+        top: 0;
+        z-index: 10;
+        padding: 10px 14px;
+        background: var(--ink);
+        color: var(--paper);
+        font-family: var(--mono);
+        font-size: 11px;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      .skip:focus {
+        left: var(--gutter);
+        top: 8px;
+      }
+
+      .wrap {
+        width: min(calc(100% - 2 * var(--gutter)), var(--width));
+        margin-inline: auto;
+      }
+
+      /* ------------------------------------------------------------- chrome */
+      .chrome {
+        border-bottom: 1px solid var(--line);
+      }
+
+      .chrome-in {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px 20px;
+        min-height: var(--chrome-h);
+      }
+
+      .brand {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .brand-mark {
+        width: 15px;
+        height: 15px;
+        border: 1.5px solid var(--accent);
+        display: inline-block;
+        flex: 0 0 auto;
+      }
+
+      .brand-name {
+        font-family: var(--sans);
+        font-size: 15px;
+        font-weight: 400;
+        letter-spacing: -0.01em;
+      }
+
+      .brand-tag {
+        padding-left: 10px;
+        border-left: 1px solid var(--line);
+      }
+
+      .chrome-meta {
+        margin: 0 0 0 auto;
+        text-align: right;
+      }
+
+      .nav {
+        display: flex;
+        align-items: center;
+        gap: clamp(16px, 2vw, 30px);
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      .nav a {
+        display: inline-block;
+        padding: 11px 0;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+        color: var(--muted);
+        transition: color 0.2s var(--ease);
+      }
+
+      .nav a:hover,
+      .nav a[aria-current="page"] {
+        color: var(--ink);
+      }
+
+      .nav-set {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        color: var(--ink) !important;
+      }
+
+      .nav-set .arr {
+        transition: transform 0.3s var(--ease);
+      }
+
+      .nav-set:hover .arr {
+        transform: translate(2px, -2px);
+      }
+
+      /* ----------------------------------------------------------- masthead */
+      .front {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) clamp(240px, 24vw, 340px);
+        grid-template-areas:
+          "copy plate"
+          "facts facts";
+        column-gap: clamp(30px, 5vw, 76px);
+        align-items: start;
+        padding-top: clamp(34px, 6vh, 68px);
+      }
+
+      .mast-copy {
+        grid-area: copy;
+      }
+
+      .eyebrow {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 0;
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .dot {
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        display: inline-block;
+        flex: 0 0 auto;
+      }
+
+      .name {
+        margin: clamp(18px, 2.4vh, 26px) 0 0;
+        font-size: clamp(45px, 5.15vw, 80px);
+        font-weight: 300;
+        line-height: 0.96;
+        letter-spacing: -0.04em;
+        text-wrap: balance;
+      }
+
+      .name em {
+        font-family: var(--serif);
+        font-style: italic;
+        font-weight: 400;
+        letter-spacing: -0.015em;
+      }
+
+      .lede {
+        margin: clamp(20px, 3vh, 30px) 0 0;
+        max-width: 44ch;
+        font-size: clamp(17px, 1.4vw, 21px);
+        line-height: 1.5;
+        font-weight: 300;
+        color: var(--body);
+      }
+
+      .actions {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 14px 26px;
+        margin-top: clamp(26px, 4vh, 36px);
+      }
+
+      .btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        padding: 12px 18px;
+        min-height: 44px;
+        border: 1px solid var(--ink);
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: 0.005em;
+        line-height: 1;
+        transition:
+          background-color 0.22s var(--ease),
+          color 0.22s var(--ease);
+      }
+
+      .btn .arr {
+        transition: transform 0.25s var(--ease);
+      }
+
+      .btn:hover,
+      .btn:focus-visible {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .btn:hover .arr {
+        transform: translateY(2px);
+      }
+
+      .btn--sm {
+        padding: 10px 14px;
+        font-size: 13px;
+      }
+
+      .mail {
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: var(--muted);
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 3px;
+        transition:
+          color 0.2s var(--ease),
+          border-color 0.2s var(--ease);
+      }
+
+      .mail:hover {
+        color: var(--ink);
+        border-color: var(--ink);
+      }
+
+      /* ------------------------------------------------------ portrait plate */
+      .plate {
+        grid-area: plate;
+        margin: 0;
+        justify-self: end;
+        width: 100%;
+        max-width: 340px;
+      }
+
+      .plate-in {
+        position: relative;
+        aspect-ratio: 4 / 5;
+        background: var(--paper);
+        border: 1px solid var(--line);
+        overflow: hidden;
+      }
+
+      .plate img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 50% 38%;
+        mix-blend-mode: multiply;
+        filter: saturate(0.96) contrast(1.02);
+      }
+
+      .plate-cap {
+        display: flex;
+        justify-content: space-between;
+        gap: 12px;
+        margin-top: 10px;
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .plate-cap span {
+        white-space: nowrap;
+      }
+
+      .plate-cap .fig {
+        color: var(--accent);
+      }
+
+      /* -------------------------------------------------------------- facts */
+      .facts {
+        grid-area: facts;
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        margin-top: clamp(42px, 6.5vh, 68px);
+        border-top: 1px solid var(--line);
+        border-bottom: 1px solid var(--line);
+      }
+
+      .fact {
+        padding: 18px clamp(14px, 1.7vw, 26px) 20px 0;
+      }
+
+      .fact:first-child {
+        padding-left: 0;
+      }
+
+      .fact + .fact {
+        border-left: 1px solid var(--line-soft);
+        padding-left: clamp(14px, 1.7vw, 26px);
+      }
+
+      .fact-key {
+        margin: 0 0 9px;
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: var(--muted);
+      }
+
+      .fact-val {
+        margin: 0;
+        font-size: 15.5px;
+        font-weight: 400;
+        line-height: 1.4;
+        color: var(--ink-soft);
+      }
+
+      .fact-sub {
+        margin: 5px 0 0;
+        font-size: 12.5px;
+        font-weight: 300;
+        color: var(--muted);
+      }
+
+      /* --------------------------------------------------------------- door */
+      .door {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        margin-top: clamp(38px, 5.5vh, 60px);
+        padding: clamp(20px, 2.6vw, 30px) clamp(22px, 3vw, 34px);
+        border: 1px solid var(--ink);
+        color: var(--ink);
+        transition:
+          background-color 0.24s var(--ease),
+          color 0.24s var(--ease);
+      }
+
+      .door:hover,
+      .door:focus-visible {
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .door-kicker {
+        display: block;
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        transition: color 0.24s var(--ease);
+      }
+
+      .door:hover .door-kicker {
+        color: var(--accent-on-ink);
+      }
+
+      .door-title {
+        display: block;
+        margin-top: 9px;
+        font-size: clamp(22px, 2.5vw, 33px);
+        font-weight: 300;
+        line-height: 1.1;
+        letter-spacing: -0.025em;
+      }
+
+      .door-sub {
+        display: block;
+        margin-top: 9px;
+        max-width: 60ch;
+        font-size: 13.5px;
+        font-weight: 300;
+        line-height: 1.5;
+        color: var(--muted);
+        transition: color 0.24s var(--ease);
+      }
+
+      .door:hover .door-sub {
+        color: rgba(246, 246, 244, 0.62);
+      }
+
+      .door-enter {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        flex: 0 0 auto;
+        font-family: var(--mono);
+        font-size: 12px;
+        letter-spacing: 0.16em;
+        text-transform: uppercase;
+      }
+
+      .door-arrow {
+        transition: transform 0.3s var(--ease);
+      }
+
+      .door:hover .door-arrow {
+        transform: translateX(6px);
+      }
+
+      /* -------------------------------------------------------------- about */
+      .about {
+        margin-top: clamp(52px, 8vh, 92px);
+      }
+
+      .block {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+        gap: clamp(24px, 4vw, 56px);
+        padding: clamp(26px, 3.4vh, 38px) 0;
+        border-top: 1px solid var(--line-soft);
+      }
+
+      .block:first-child {
+        border-top: 1px solid var(--line);
+      }
+
+      .block-no {
+        margin: 0 0 10px;
+        font-family: var(--mono);
+        font-size: 10.5px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .block-title {
+        margin: 0;
+        font-size: clamp(19px, 1.7vw, 23px);
+        font-weight: 400;
+        line-height: 1.22;
+        letter-spacing: -0.012em;
+        max-width: 15ch;
+      }
+
+      .block-body {
+        max-width: 66ch;
+      }
+
+      .block-body p {
+        margin: 0 0 15px;
+        font-size: clamp(16px, 1.15vw, 17.5px);
+        line-height: 1.68;
+        color: var(--body);
+      }
+
+      .block-body p:last-child {
+        margin-bottom: 0;
+      }
+
+      .block-body a {
+        border-bottom: 1px solid rgba(16, 18, 20, 0.28);
+        transition: border-color 0.2s var(--ease);
+      }
+
+      .block-body a:hover {
+        border-color: var(--ink);
+      }
+
+      /* ------------------------------------------------------------- record */
+      .record {
+        display: grid;
+        grid-template-columns: minmax(0, 3fr) minmax(0, 7fr);
+        gap: clamp(24px, 4vw, 56px);
+        margin-top: clamp(52px, 8vh, 92px);
+        padding-top: clamp(26px, 3.4vh, 38px);
+        border-top: 1px solid var(--line);
+      }
+
+      .record-head .block-title {
+        max-width: none;
+      }
+
+      .record-head .btn {
+        margin-top: 18px;
+      }
+
+      .record-list {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .record-row {
+        display: grid;
+        grid-template-columns: 58px minmax(0, 1fr);
+        gap: 18px;
+        align-items: baseline;
+        padding: 13px 0;
+        border-top: 1px solid var(--line-soft);
+        font-size: 15px;
+        line-height: 1.45;
+        color: var(--ink-soft);
+      }
+
+      .record-row:first-child {
+        padding-top: 0;
+        border-top: 0;
+      }
+
+      .record-year {
+        font-family: var(--mono);
+        font-size: 10px;
+        letter-spacing: 0.14em;
+        color: var(--muted);
+        padding-top: 2px;
+      }
+
+      .record-note {
+        margin: 16px 0 0;
+        max-width: 30ch;
+        font-size: 12.5px;
+        line-height: 1.55;
+        font-weight: 300;
+        color: var(--muted);
+      }
+
+      /* ------------------------------------------------------------- footer */
+      .foot {
+        margin-top: clamp(58px, 9vh, 104px);
+        border-top: 1px solid var(--line);
+      }
+
+      .foot-in {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 10px 28px;
+        padding: 22px 0 26px;
+      }
+
+      .foot p {
+        margin: 0;
+      }
+
+      .foot .code {
+        color: var(--accent);
+      }
+
+      .foot a {
+        color: var(--ink-soft);
+        border-bottom: 1px solid var(--line);
+        padding-bottom: 2px;
+        transition: border-color 0.2s var(--ease);
+      }
+
+      .foot a:hover {
+        border-color: var(--ink);
+      }
+
+      /* ------------------------------------------------------------ motion */
+      @keyframes rise {
+        from {
+          opacity: 0;
+          transform: translateY(14px);
+        }
+        to {
+          opacity: 1;
+          transform: none;
+        }
+      }
+
+      .name {
+        animation: rise 0.72s var(--ease) both;
+      }
+
+      .lede,
+      .actions {
+        animation: rise 0.72s var(--ease) 0.06s both;
+      }
+
+      .plate {
+        animation: rise 0.72s var(--ease) 0.12s both;
+      }
+
+      @media (prefers-reduced-motion: reduce) {
+        html {
+          scroll-behavior: auto;
+        }
+
+        .name,
+        .lede,
+        .actions,
+        .plate {
+          animation: none;
+        }
+
+        * {
+          transition-duration: 0.001ms !important;
+        }
+      }
+
+      @media (max-width: 1100px) {
+        .fact-val {
+          font-size: 14.5px;
+        }
+
+        .plate-cap {
+          font-size: 9px;
+          letter-spacing: 0.1em;
+        }
+      }
+
+      /* ------------------------------------------------------------ mobile */
+      @media (max-width: 900px) {
+        :root {
+          --chrome-h: 48px;
+          --gutter: 20px;
+        }
+
+        .chrome-meta,
+        .nav li:not(.nav-li--set) {
+          display: none;
+        }
+
+        .front {
+          grid-template-columns: minmax(0, 1fr);
+          grid-template-areas:
+            "copy"
+            "facts"
+            "plate";
+          row-gap: 30px;
+          padding-top: 30px;
+        }
+
+        .facts {
+          grid-template-columns: minmax(0, 1fr);
+          margin-top: 0;
+        }
+
+        .plate {
+          justify-self: start;
+          max-width: min(74vw, 300px);
+        }
+
+        .fact {
+          padding: 15px 0;
+          border-top: 1px solid var(--line-soft);
+        }
+
+        .fact:first-child {
+          border-top: 0;
+          padding-top: 0;
+        }
+
+        .fact + .fact {
+          border-left: 0;
+          padding-left: 0;
+        }
+
+        .door {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 18px;
+        }
+
+        .block,
+        .record {
+          grid-template-columns: minmax(0, 1fr);
+          gap: 12px;
+        }
+
+        .block {
+          padding: 24px 0;
+        }
+
+        .block-body p {
+          font-size: 16px;
+        }
+
+        .record-row {
+          grid-template-columns: 52px minmax(0, 1fr);
+          gap: 14px;
+          font-size: 14.5px;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .name {
+          font-size: 44px;
+        }
+
+        .door-title {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <a class="skip" href="#main">Skip to content</a>
+
+    <header class="chrome">
+      <div class="wrap chrome-in">
+        <a class="brand" href="/" aria-label="Ethan Antoine Li — about">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">ethan antoine li</span>
+          <span class="brand-tag mono">about</span>
+        </a>
+        <p class="chrome-meta mono">Front matter · rev 2026.10</p>
+        <nav aria-label="Sections">
+          <ul class="nav">
+            <li><a href="#about" aria-current="page">About</a></li>
+            <li><a href="#record">Record</a></li>
+            <li class="nav-li--set"><a class="nav-set" href="/personal-page/">The set <span class="arr" aria-hidden="true">↗</span></a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <div class="wrap">
+        <!-- ==================================================== masthead + facts -->
+        <div class="front">
+          <div class="mast-copy">
+            <p class="eyebrow"><span class="dot" aria-hidden="true"></span>About · the person behind the drawings</p>
+            <h1 class="name" id="name">Ethan <em>Antoine</em> Li</h1>
+            <p class="lede">
+              A-level student in Guangzhou. I design, print and program the pieces of a
+              mountain-rescue robot — and I'm applying to read engineering in 2027.
+            </p>
+            <div class="actions">
+              <a class="btn" href="/cv/Ethan-Antoine-Li-CV.pdf" download>
+                CV — one page <span class="arr" aria-hidden="true">↓</span>
+              </a>
+              <a class="mail" href="mailto:ethan.li.1@outlook.com">ethan.li.1@outlook.com</a>
+            </div>
+          </div>
+
+          <figure class="plate">
+            <div class="plate-in">
+              <img
+                src="/img/portrait.jpg"
+                width="720"
+                height="900"
+                alt="Ethan Antoine Li, photographed in a dark suit and glasses against a white background."
+                fetchpriority="high"
+                decoding="async"
+              />
+            </div>
+            <figcaption class="plate-cap">
+              <span><span class="fig">Fig. 000</span> — portrait</span>
+              <span>Guangzhou · 2026</span>
+            </figcaption>
+          </figure>
+
+          <section class="facts" aria-label="At a glance">
+            <div class="fact">
+              <p class="fact-key">School</p>
+              <p class="fact-val">The British School of Guangzhou</p>
+              <p class="fact-sub">Guangzhou, China</p>
+            </div>
+            <div class="fact">
+              <p class="fact-key">Year</p>
+              <p class="fact-val">Year 13</p>
+              <p class="fact-sub">A-levels, 2025–2027</p>
+            </div>
+            <div class="fact">
+              <p class="fact-key">A-levels &amp; EPQ</p>
+              <p class="fact-val">Mathematics, Further Mathematics, Physics, Chemistry</p>
+              <p class="fact-sub">EPQ · rescue arm, 2026</p>
+            </div>
+            <div class="fact">
+              <p class="fact-key">Course</p>
+              <p class="fact-val">Engineering</p>
+              <p class="fact-sub">2027 entry</p>
+            </div>
+          </section>
+        </div>
+
+        <!-- ============================================================= about -->
+        <section class="about" id="about" aria-label="About">
+          <article class="block">
+            <div class="block-head">
+              <p class="block-no">01</p>
+              <h2 class="block-title">The short version</h2>
+            </div>
+            <div class="block-body">
+              <p>
+                I'm in my final year at The British School of Guangzhou. Most of what I do outside
+                lessons comes back to one idea: a robot that could reach someone who has fallen on a
+                mountain, and do a job that would otherwise put a rescue team on dangerous ground.
+                The arm is the first piece; the drone and the software that ties them together are
+                next. None of it is finished — that is the point of the drawing set.
+              </p>
+              <p>
+                There is also <a href="/personal-page/work/nora/">Nora</a>, a personal AI I built for
+                myself and use every day, and a website that documents all of it — including the
+                parts that don't work yet.
+              </p>
+            </div>
+          </article>
+
+          <article class="block">
+            <div class="block-head">
+              <p class="block-no">02</p>
+              <h2 class="block-title">Why rescue</h2>
+            </div>
+            <div class="block-body">
+              <p>
+                I ski, and every winter brings the same shape of accident: a person down on a line
+                that is difficult, exposed, or both. That is the accident the EPQ brief is for — an
+                arm that can work where a person would be exposed.
+              </p>
+              <p>
+                The long version of the project is one robot that does the approach and the rescue
+                itself, with a drone working further out as its eye. I started with the arm because
+                it is the part that has to touch a person — everything else can be built around it.
+              </p>
+            </div>
+          </article>
+
+          <article class="block">
+            <div class="block-head">
+              <p class="block-no">03</p>
+              <h2 class="block-title">How I build</h2>
+            </div>
+            <div class="block-body">
+              <p>
+                I design in Shapr3D, print on a Bambu Lab A1 mini, and wire the result to an
+                STM32F407 over RS485. The kinematics are Python; the browser model is three.js. My
+                EPQ is the arm's write-up: six axes drawn, five built, a 500 g payload target, and a
+                research paper next to the hardware.
+              </p>
+              <p>
+                I would rather show a part that survives a test than a render that looks good, so
+                nothing on this site is labelled better than it is.
+              </p>
+            </div>
+          </article>
+
+          <article class="block">
+            <div class="block-head">
+              <p class="block-no">04</p>
+              <h2 class="block-title">Off the bench</h2>
+            </div>
+            <div class="block-body">
+              <p>
+                Two HKU summers — AI application development with Python (June 2025), then advanced
+                physics (July 2026). A battery-materials lab in December 2025: graphene lithium
+                electrode materials, coin cells, charge–discharge and EIS. Before that, a drone built
+                from scratch at home.
+              </p>
+              <p>
+                Away from the bench: tennis singles for the school team, a charity stall that raised
+                over RMB 2,600, and a school Social Impact Award. French is my first language; I've
+                been at school in Guangzhou since 2019 and speak Chinese and English fluently.
+              </p>
+            </div>
+          </article>
+        </section>
+
+        <!-- ============================================================ record -->
+        <section class="record" id="record" aria-labelledby="record-title">
+          <div class="record-head">
+            <p class="block-no">05</p>
+            <h2 class="block-title" id="record-title">A few things on the record</h2>
+            <a class="btn btn--sm" href="/cv/Ethan-Antoine-Li-CV.pdf" download>
+              Full CV <span class="arr" aria-hidden="true">↓</span>
+            </a>
+            <p class="record-note">
+              Competitions and the EPQ. The CV has the rest — summer schools, activities and
+              languages.
+            </p>
+          </div>
+          <div>
+            <ul class="record-list">
+              <li class="record-row">
+                <span class="record-year">2026</span>
+                <span>EPQ — five-axis robotic arm for rescue operations</span>
+              </li>
+              <li class="record-row">
+                <span class="record-year">2026</span>
+                <span>Senior Physics Challenge — Bronze</span>
+              </li>
+              <li class="record-row">
+                <span class="record-year">2025</span>
+                <span>Senior Mathematical Challenge — Silver</span>
+              </li>
+              <li class="record-row">
+                <span class="record-year">2024</span>
+                <span>Intermediate Physics Challenge — final, Bronze (ASDAN)</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============================================================== door -->
+        <a class="door" href="/personal-page/">
+          <span class="door-left">
+            <span class="door-kicker">The drawing set</span>
+            <span class="door-title">The work — arm, drone, Nora</span>
+            <span class="door-sub"
+              >Every build on its own sheet: the five-axis arm, the FPV drone, Nora, and the plan
+              they belong to.</span
+            >
+          </span>
+          <span class="door-enter">Open the set <span class="door-arrow" aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="wrap foot-in">
+        <p class="mono"><span class="code">F 000</span> · about · ethan antoine li</p>
+        <p class="mono">Built by hand · no tracking · no cookies</p>
+        <p class="mono"><a href="/personal-page/">The drawing set ↗</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
