@@ -27,6 +27,7 @@ No build step, no npm. Everything is one self-contained HTML file per page plus 
   check the other still serves.
 - Do not add third-party fonts, analytics or CDN requests — the site is deliberately self-hosted
   and cookie-free.
-- **The CV is not published and not linked** (Ethan's call, 2026-10-22). It is sent on request;
-  don't add a PDF back to `site/` unless he asks.
+- **The CV is not published and not linked** (Ethan's call, 2026-10-22). Its content —
+  education, competitions, toolkit — now lives directly on the About page. Don't add a PDF back
+  to `site/` unless he asks.
 - Build record for the About page: `ABOUT-PAGE.md`.

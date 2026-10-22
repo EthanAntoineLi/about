@@ -318,41 +318,6 @@
         margin-top: clamp(26px, 4vh, 36px);
       }
 
-      .btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 12px;
-        padding: 12px 18px;
-        min-height: 44px;
-        border: 1px solid var(--ink);
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 0.005em;
-        line-height: 1;
-        transition:
-          background-color 0.22s var(--ease),
-          color 0.22s var(--ease);
-      }
-
-      .btn .arr {
-        transition: transform 0.25s var(--ease);
-      }
-
-      .btn:hover,
-      .btn:focus-visible {
-        background: var(--ink);
-        color: var(--paper);
-      }
-
-      .btn:hover .arr {
-        transform: translateY(2px);
-      }
-
-      .btn--sm {
-        padding: 10px 14px;
-        font-size: 13px;
-      }
-
       .mail {
         font-family: var(--mono);
         font-size: 12px;
@@ -661,6 +626,19 @@
         font-size: 12.5px;
         line-height: 1.55;
         font-weight: 300;
+        color: var(--muted);
+      }
+
+      .record-skills {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        gap: 6px 16px;
+        margin: 20px 0 0;
+        padding-top: 14px;
+        border-top: 1px solid var(--line-soft);
+        font-size: 13px;
+        line-height: 1.5;
         color: var(--muted);
       }
 
@@ -988,14 +966,16 @@
             <div class="block-body">
               <p>
                 Two HKU summers — AI application development with Python (June 2025), then advanced
-                physics (July 2026). A battery-materials lab in December 2025: graphene lithium
+                physics (July 2026); after the second I was invited back to the HKU Info Day to talk
+                to prospective students. A battery-materials lab in December 2025: graphene lithium
                 electrode materials, coin cells, charge–discharge and EIS. Before that, a drone built
                 from scratch at home.
               </p>
               <p>
                 Away from the bench: tennis singles for the school team, a charity stall that raised
-                over RMB 2,600, and a school Social Impact Award. French is my first language; I've
-                been at school in Guangzhou since 2019 and speak Chinese and English fluently.
+                over RMB 2,600, and a school Social Impact Award. French is my first language — I was
+                born in France — and I've been at school in Guangzhou since 2019, speaking Chinese
+                and English fluently.
               </p>
             </div>
           </article>
@@ -1007,15 +987,16 @@
             <p class="block-no">05</p>
             <h2 class="block-title" id="record-title">A few things on the record</h2>
             <p class="record-note">
-              Competitions and the EPQ. Summer schools, activities and languages are on the CV —
-              it isn't published here, but I'm happy to send a copy.
+              Education, competitions and the EPQ — the CV's record, kept on the page instead of in
+              a download.
             </p>
-            <a class="btn btn--sm" href="mailto:ethan.li.1@outlook.com"
-              >Request the CV <span class="arr" aria-hidden="true">↗</span></a
-            >
           </div>
           <div>
             <ul class="record-list">
+              <li class="record-row">
+                <span class="record-year">2019–</span>
+                <span>The British School of Guangzhou — IGCSE &amp; A-level curriculum</span>
+              </li>
               <li class="record-row">
                 <span class="record-year">2026</span>
                 <span>EPQ — five-axis robotic arm for rescue operations</span>
@@ -1029,10 +1010,22 @@
                 <span>Senior Mathematical Challenge — Silver</span>
               </li>
               <li class="record-row">
+                <span class="record-year">2025</span>
+                <span>Australian Mathematics Challenge — Credit</span>
+              </li>
+              <li class="record-row">
                 <span class="record-year">2024</span>
                 <span>Intermediate Physics Challenge — final, Bronze (ASDAN)</span>
               </li>
+              <li class="record-row">
+                <span class="record-year">2024</span>
+                <span>Intermediate Physics Challenge — Silver</span>
+              </li>
             </ul>
+            <p class="record-skills">
+              <span class="mono">Toolkit</span>
+              <span>Python, C++ · Shapr3D · STM32F407 · Bambu Lab A1 mini · three.js</span>
+            </p>
           </div>
         </section>
 
