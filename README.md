@@ -1,33 +1,30 @@
-# EthanAntoineLi.github.io
+# ethan-about — the About page at `/about/`
 
-Root-domain site for <https://ethanantoineli.github.io/>.
+The main site is the drawing-set hub at <https://ethanantoineli.github.io/>
+(repo `EthanAntoineLi.github.io` — the old `personal-page` repo).
 
-## What is here
+This repo deploys the **About page** as a GitHub Pages project site:
+<https://ethanantoineli.github.io/about/>.
 
 | Path | What it is |
 | --- | --- |
-| `site/index.html` | **The About page** — the front door of the site: who Ethan is, the admissions facts (school, year, A-level subjects, intended course), a portrait, a one-page CV, and the door into the drawing set. |
-| `site/404.html` | Wrong-address page. Brand and "back to the front page" links go to `/`; the sheet list links into the portfolio. |
-| `site/img/portrait.jpg` | Portrait used on the About page (900 × 900, from a studio headshot). |
-| `site/img/og-about.png` | 1200 × 630 social card for the About page. |
-| `site/fonts/` | Self-hosted Inter Tight 300/400 and Instrument Serif italic. No external requests. |
-
-The portfolio itself is a project page at `/personal-page/` (`EthanAntoineLi/personal-page`).
-GitHub Pages only serves a custom 404 from a site's own root, so this user-site repo exists to
-host both the root front matter and that 404.
+| `site/index.html` | The About page — school, year, location, A-level subjects and predictions, intended course, portrait, record and toolkit. |
+| `site/img/portrait.jpg` | Portrait used on the page (4:5, 720 × 900). |
+| `site/img/og-about.png` | 1200 × 630 social card. |
+| `site/fonts/` | Self-hosted Inter Tight 300/400 and Instrument Serif italic. |
 
 ## Deploy
 
-`.github/workflows/deploy.yml` uploads `site/` as a Pages artifact on every push to `main`.
-No build step, no npm. Everything is one self-contained HTML file per page plus local assets.
+`.github/workflows/deploy.yml` uploads `site/` as a Pages artifact on every push to `main`;
+GitHub Pages serves it at `/about/`. No build step, no npm.
+
+Asset paths are **relative** on purpose (`fonts/…`, `img/…`) so the page works under the
+project path. Links back into the site (`/`, `/work/nora/`) are root-absolute.
 
 ## Notes
 
-- `/` and `/personal-page/` are two independent Pages deployments. After touching either one,
-  check the other still serves.
-- Do not add third-party fonts, analytics or CDN requests — the site is deliberately self-hosted
-  and cookie-free.
+- The hub at `/` carries the "About me" button that opens this page.
 - **The CV is not published and not linked** (Ethan's call, 2026-10-22). Its content —
-  education, competitions, toolkit — now lives directly on the About page. Don't add a PDF back
-  to `site/` unless he asks.
-- Build record for the About page: `ABOUT-PAGE.md`.
+  education, competitions, toolkit — lives directly on the About page.
+- The old root-domain 404 page was removed with the move; the hub now owns the 404.
+- Build record: `ABOUT-PAGE.md`.

@@ -1,4 +1,4 @@
-name: Deploy root 404 to GitHub Pages
+name: Deploy about page to GitHub Pages
 
 on:
   push:
